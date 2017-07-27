@@ -1,6 +1,7 @@
 package com.taurus.sixtcartest.core.injection;
 
 import android.app.Application;
+import com.taurus.sixtcartest.network.retrofit.RetrofitCarInfoApi;
 import dagger.Module;
 import dagger.Provides;
 import javax.inject.Singleton;
@@ -18,6 +19,12 @@ public class ApplicationModule {
     @Singleton
     public Application provideApplication() {
         return application;
+    }
+
+    @Provides
+    @Singleton
+    public RetrofitCarInfoApi provideCarInfoApi() {
+        return new RetrofitCarInfoApi();
     }
 
 }
