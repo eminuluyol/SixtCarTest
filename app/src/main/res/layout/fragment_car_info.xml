@@ -1,6 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<com.sothree.slidinguppanel.SlidingUpPanelLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:sothree="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/sliding_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="bottom"
+    sothree:umanoAnchorPoint="0.90"
+    sothree:umanoDragView="@+id/dragView"
+    sothree:umanoOverlay="true"
+    sothree:umanoParallaxOffset="100dp"
+    sothree:umanoPanelHeight="@dimen/space_xxlarge"
+    sothree:umanoShadowHeight="0dp">
 
-</LinearLayout>
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:background="@drawable/background_shape">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/carInfoRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:clipToPadding="false"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <include
+        android:id="@+id/emptyView"
+        layout="@layout/empty_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+
+  </RelativeLayout>
+
+  <!-- map view -->
+  <LinearLayout
+      android:id="@+id/map_layout"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:focusable="true"
+      android:focusableInTouchMode="true"
+      android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/dragView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_xxlarge"
+        android:background="@android:color/transparent"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+      <TextView
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="@dimen/space_medium"
+          android:layout_weight="1"
+          style="@style/TextViewStyle"
+          android:text="@string/display_on_map"
+          android:maxLines="1" />
+
+      <ImageButton
+          android:id="@+id/carInfoButtonOpenMap"
+          android:layout_width="@dimen/button_map_image_size"
+          android:layout_height="@dimen/button_map_image_size"
+          android:layout_margin="6dp"
+          android:background="@drawable/circle_button"
+          android:elevation="4dp"
+          android:src="@drawable/ic_map" />
+
+    </LinearLayout>
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+  </LinearLayout>
+
+</com.sothree.slidinguppanel.SlidingUpPanelLayout>

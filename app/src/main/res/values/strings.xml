@@ -4,5 +4,6 @@
 
     <!-- Car Info -->
     <string name="car_info_title">Car Info</string>
+    <string name="display_on_map">Display on map</string>
 
 </resources>
