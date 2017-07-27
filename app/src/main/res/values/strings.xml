@@ -1,24 +1,8 @@
 <resources>
-    <string name="app_name">Car Pooling</string>
+    <string name="app_name">SixtCar Test</string>
     <string name="empty_generic_text">NO DATA</string>
 
-    <!-- PLACE MARKER -->
-    <string name="place_marker_title">Carpool</string>
-    <string name="search_text_area_hint">Would be an option</string>
-    <string name="marker_address">Address:</string>
-    <string name="marker_name">Name:</string>
-    <string name="marker_longitude">Longitude:</string>
-    <string name="marker_latitude">Latitude:</string>
-    <string name="marker_engine_type">Engine Type:</string>
-    <string name="marker_fuel">Fuel:</string>
-    <string name="marker_vin">Vin:</string>
-    <string name="marker_exterior">Exterior:</string>
-    <string name="marker_interior">Interior:</string>
-    <string name="title_activity_maps">Maps</string>
-    <string name="google_maps_error">We’re sorry. We could not connect to Google Maps.</string>
-    <string name="location_couldnt_find">Couldn\'t get the location. Make sure location is enabled on the device</string>
-    <string name="permission_denied">Permission has been denied</string>
-    <string name="permission_never_task">Permission has been denied. If you want to Activate them you must do it manually from your phone Settings.</string>
-    <string name="current_location">Current Location</string>
+    <!-- Car Info -->
+    <string name="car_info_title">Car Info</string>
 
 </resources>
