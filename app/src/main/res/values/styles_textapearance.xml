@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TextStyle" parent="TextAppearance.AppCompat"/>
+
+    <style name="TextStyle.14">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="TextStyle.14.White">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="TextStyle.14.Cyan">
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="TextStyle.14.Black">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="TextStyle.14.Black.Bold">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextStyle.14.Black54">
+        <item name="android:textColor">@color/black54</item>
+    </style>
+
+    <style name="TextStyle.16">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="TextStyle.16.Black">
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <style name="TextStyle.16.White">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="TextStyle.18">
+        <item name="android:textSize">18sp</item>
+    </style>
+    <style name="TextStyle.18.White">
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <style name="TextStyle.18.Cyan">
+        <item name="android:textColor">@color/cyan</item>
+    </style>
+    <style name="TextStyle.18.Black54">
+        <item name="android:textColor">@color/black54</item>
+    </style>
+    <style name="TextStyle.20">
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="TextStyle.20.Black">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="TextStyle.20.White">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="TextStyle.20.Cyan">
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="TextStyle.24">
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="TextStyle.34">
+        <item name="android:textSize">34sp</item>
+    </style>
+
+    <style name="TextStyle.45">
+        <item name="android:textSize">45sp</item>
+    </style>
+
+    <style name="TextStyle.56">
+        <item name="android:textSize">56sp</item>
+    </style>
+
+    <!-- bold styles -->
+    <style name="TextStyle.14.Bold">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextStyle.14.Bold.White">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="TextStyle.14.Black54.Bold">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextStyle.16.Bold">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextStyle.16.Bold.White">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="TextStyle.18.White.Bold">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextStyle.18.Cyan.Bold">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextStyle.18.Black54.Bold">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextStyle.20.Bold">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextStyle.20.White.Bold">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextStyle.20.Cyan.Bold">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextStyle.20.Bold.CyanDark">
+        <item name="android:textColor">@color/cyanDark</item>
+    </style>
+
+    <style name="TextStyle.24.Bold">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextStyle.24.Bold.CyanDark">
+        <item name="android:textColor">@color/cyanDark</item>
+    </style>
+
+    <style name="TextStyle.24.Bold.Black">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="TextStyle.34.Bold">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextStyle.34.Bold.Black">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="TextStyle.34.Bold.CyanDark">
+        <item name="android:textColor">@color/cyanDark</item>
+    </style>
+
+    <style name="TextStyle.45.Bold">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextStyle.56.Bold">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+</resources>

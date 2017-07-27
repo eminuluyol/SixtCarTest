@@ -1,0 +1,101 @@
+apply plugin: 'com.android.application'
+apply plugin: 'me.tatarka.retrolambda'
+
+android {
+  compileSdkVersion rootProject.compileSdkVersion
+  buildToolsVersion rootProject.buildToolsVersion
+  defaultConfig {
+    applicationId "com.taurus.sixtcartest"
+    minSdkVersion 19
+    targetSdkVersion 25
+    versionCode 1
+    versionName "1.0"
+    testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+  }
+
+  signingConfigs {
+
+    debug {
+      storeFile file("debug.keystore")
+    }
+
+    release {
+      keyAlias 'android'
+      keyPassword 'android'
+      storePassword 'android'
+      storeFile file('release.jks')
+    }
+  }
+
+  buildTypes {
+
+    debug {
+      zipAlignEnabled true
+    }
+    release {
+      shrinkResources true
+      minifyEnabled true
+      proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+      signingConfig signingConfigs.release
+    }
+  }
+
+  packagingOptions {
+    exclude 'META-INF/rxjava.properties'
+  }
+
+  compileOptions {
+    sourceCompatibility JavaVersion.VERSION_1_8
+    targetCompatibility JavaVersion.VERSION_1_8
+  }
+
+}
+
+dependencies {
+  compile fileTree(dir: 'libs', include: ['*.jar'])
+  androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+    exclude group: 'com.android.support', module: 'support-annotations'
+  })
+
+  compile "com.android.support:appcompat-v7:$rootProject.supportLibVersion"
+  compile "com.android.support:mediarouter-v7:$rootProject.supportLibVersion"
+  compile "com.android.support:design:$rootProject.supportLibVersion"
+  compile "com.android.support:cardview-v7:$rootProject.supportLibVersion"
+  compile "com.android.support:recyclerview-v7:$rootProject.supportLibVersion"
+  compile "com.android.support:support-v4:$rootProject.supportLibVersion"
+  compile "com.android.support:animated-vector-drawable:$rootProject.supportLibVersion"
+  compile "com.android.support:customtabs:$rootProject.supportLibVersion"
+
+  compile 'com.jakewharton:butterknife:8.5.1'
+  annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
+
+  compile 'com.hannesdorfmann.mosby:mvp:2.0.1'
+
+  compile 'com.google.dagger:dagger:2.8'
+  annotationProcessor 'com.google.dagger:dagger-compiler:2.8'
+
+  compile 'com.hannesdorfmann:adapterdelegates3:3.0.1'
+
+  compile 'com.hannesdorfmann.fragmentargs:annotation:3.0.2'
+  annotationProcessor 'com.hannesdorfmann.fragmentargs:processor:3.0.2'
+
+  compile 'com.github.bumptech.glide:glide:3.7.0'
+
+  compile 'com.squareup.retrofit2:retrofit:2.1.0'
+  compile 'com.jakewharton.retrofit:retrofit2-rxjava2-adapter:1.0.0'
+  compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+  compile 'com.squareup.okhttp3:logging-interceptor:3.3.1'
+
+  compile 'io.reactivex.rxjava2:rxjava:2.0.1'
+  compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
+
+  compile 'com.sothree.slidinguppanel:library:3.3.1'
+
+  compile 'com.daimajia.easing:library:2.0@aar'
+  compile 'com.daimajia.androidanimations:library:2.2@aar'
+
+  compile 'com.google.android.gms:play-services-maps:11.0.1'
+
+  testCompile 'junit:junit:4.12'
+
+}

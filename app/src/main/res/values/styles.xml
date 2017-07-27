@@ -1,0 +1,20 @@
+<resources>
+
+    <!--CARD VIEW -->
+    <style name="CardViewStyle" parent="CardView">
+        <item name="android:layout_marginLeft">@dimen/space_small</item>
+        <item name="android:layout_marginRight">@dimen/space_small</item>
+        <item name="android:layout_marginTop">@dimen/space_small</item>
+        <item name="android:layout_marginBottom">@dimen/space_small</item>
+        <item name="cardBackgroundColor">@color/white</item>
+        <item name="cardUseCompatPadding">true</item>
+        <item name="cardElevation">@dimen/list_card_elevation</item>
+    </style>
+
+    <style name="TextViewStyle">
+        <item name="android:padding">@dimen/space_edit_text</item>
+        <item name="android:textColor">@color/gray</item>
+        <item name="android:background">@drawable/rounded_textview</item>
+    </style>
+
+</resources>
