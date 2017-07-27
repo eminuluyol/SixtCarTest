@@ -2,6 +2,9 @@ package com.taurus.sixtcartest.network.model;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
+import com.taurus.sixtcartest.carinfo.adapter.CarInfoUIModel;
+import com.taurus.sixtcartest.util.ListConverter;
+import java.util.List;
 
 /**
  * Created by eminuluyol on 27/07/2017.
@@ -200,4 +203,29 @@ public class CarInfo {
     this.carImageUrl = carImageUrl;
   }
 
+  public static List<CarInfoUIModel> createList(List<CarInfo> carInfos) {
+    return ListConverter.convert(carInfos, item -> create(item));
+  }
+
+  private static CarInfoUIModel create(CarInfo item) {
+
+    final CarInfoUIModel model = new CarInfoUIModel();
+
+    model.setId(item.getId());
+    model.setName(item.getMake() + " " + item.getName() + " " + item.getModelName());
+    model.setSeries(item.getSeries());
+    model.setFuelType(item.getFuelType());
+    model.setFuelLevel(String.valueOf(item.getFuelLevel()));
+    model.setLatitude(item.getLatitude());
+    model.setLongitude(item.getLongitude());
+    model.setInnerCleanliness(item.getInnerCleanliness());
+    model.setCarImageUrl(prepareCarImageUrl(item.getModelIdentifier(), item.getColor()));
+
+    return model;
+  }
+
+  private static String prepareCarImageUrl(String modelIdentifier, String color) {
+    return "https://prod.drive-now-content.com/fileadmin/user_upload_global/assets/cars/"
+        + modelIdentifier + "/" + color + "/2x/car.png";
+  }
 }

@@ -5,6 +5,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 import butterknife.ButterKnife;
+import com.taurus.sixtcartest.carinfo.adapter.CarInfoUIModel;
 
 public abstract class BaseViewHolder extends RecyclerView.ViewHolder {
 
@@ -12,5 +13,6 @@ public abstract class BaseViewHolder extends RecyclerView.ViewHolder {
         super(LayoutInflater.from(parentView.getContext()).inflate(layoutId, parentView, false));
         ButterKnife.bind(this, itemView);
     }
+
 
 }
