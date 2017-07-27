@@ -73,6 +73,7 @@ public class CarInfoFragment extends BaseFragment<CarInfoView, CarInfoPresenter>
     return R.layout.fragment_car_info;
   }
 
+  @NonNull
   @Override
   public CarInfoPresenter createPresenter() {
     return new CarInfoPresenter();
@@ -88,7 +89,6 @@ public class CarInfoFragment extends BaseFragment<CarInfoView, CarInfoPresenter>
     carInfoAdapter = RecyclerAdapter.with(new CarInfoAdapterDelegate());
     carInfoRecyclerView.setAdapter(carInfoAdapter);
 
-    getPresenter().checkGoogleServiceAvailability();
     getPresenter().onCarInfoRequested();
 
   }
@@ -99,6 +99,8 @@ public class CarInfoFragment extends BaseFragment<CarInfoView, CarInfoPresenter>
     this.carInfoUIModels = carInfoUIModels;
     List<GenericItem> data = new ArrayList<>(carInfoUIModels);
     carInfoAdapter.swapItems(data);
+
+    getPresenter().checkGoogleServiceAvailability();
 
   }
 
@@ -154,6 +156,7 @@ public class CarInfoFragment extends BaseFragment<CarInfoView, CarInfoPresenter>
 
   @Override
   public void showInformationDialog(GoogleApiAvailability apiAvailability, int isAvailable) {
+
     Dialog dialog = apiAvailability.getErrorDialog(getActivity(), isAvailable, 0);
     dialog.show();
 
@@ -184,7 +187,6 @@ public class CarInfoFragment extends BaseFragment<CarInfoView, CarInfoPresenter>
 
   }
 
-
   private void drawPlaceMarkersOnMap(GoogleMap googleMap, List<CarInfoUIModel> carInfoUIModels) {
 
     // Add a marker in Map
@@ -193,7 +195,6 @@ public class CarInfoFragment extends BaseFragment<CarInfoView, CarInfoPresenter>
       LatLng place = new LatLng(marker.getLatitude(), marker.getLongitude());
       googleMap.addMarker(new MarkerOptions().position(place)
           .title(marker.getName())
-          .snippet(marker.getFuelType())
           .icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_car_location)));
 
     }

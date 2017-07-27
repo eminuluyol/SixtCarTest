@@ -12,9 +12,9 @@
     </style>
 
     <style name="TextViewStyle">
-        <item name="android:padding">@dimen/space_edit_text</item>
+        <item name="android:padding">@dimen/space_text_view</item>
         <item name="android:textColor">@color/gray</item>
-        <item name="android:background">@drawable/rounded_textview</item>
+        <item name="android:background">@drawable/rounded_cyan_textview</item>
     </style>
 
 </resources>

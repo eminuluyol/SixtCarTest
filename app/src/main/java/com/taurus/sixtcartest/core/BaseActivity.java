@@ -40,11 +40,14 @@ public abstract class BaseActivity<V extends BaseView, P extends BasePresenter<V
     private static final String TAG_PROGRESS_DIALOG = "PROGRESS_DIALOG";
     private static final String SHORTCUT_ID = "shortcut_web";
 
-    @BindView(R.id.toolbar) Toolbar toolbar;
+    @BindView(R.id.toolbar)
+    Toolbar toolbar;
 
-    @BindView(R.id.toolbar_title) TextView toolbarTitle;
+    @BindView(R.id.toolbar_title)
+    TextView toolbarTitle;
 
-    @BindView(R.id.root) View rootView;
+    @BindView(R.id.root)
+    View rootView;
 
     private boolean homeAsUpEnabled;
 

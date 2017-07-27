@@ -21,6 +21,9 @@ public class CarInfoViewHolder extends BaseViewHolder {
   @BindView(R.id.carInfoTextViewName)
   TextView textViewName;
 
+  @BindView(R.id.carInfoTextViewSeries)
+  TextView textViewSeries;
+
   @BindView(R.id.carInfoTextViewFuelType)
   TextView textViewFuelType;
 
@@ -44,6 +47,7 @@ public class CarInfoViewHolder extends BaseViewHolder {
         .into(imageViewCar);
 
     textViewName.setText(item.getName());
+    textViewSeries.setText(item.getSeries());
     textViewFuelType.setText(item.getFuelType());
     textViewFuelLevel.setText(item.getFuelLevel());
     textViewCleanliness.setText(item.getInnerCleanliness());

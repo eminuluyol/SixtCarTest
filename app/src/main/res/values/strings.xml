@@ -4,7 +4,11 @@
 
     <!-- Car Info -->
     <string name="car_info_title">Car Info</string>
-    <string name="display_on_map">Display on map</string>
+    <string name="display_on_map">Display locations on a map</string>
     <string name="google_maps_error">We’re sorry. We could not connect to Google Maps.</string>
+    <string name="car_info_series">Series:</string>
+    <string name="car_info_fuel_type">Fuel Type:</string>
+    <string name="car_info_fuel_level">Fuel Level:</string>
+    <string name="car_info_inner_cleanliness">Inner Cleanliness:</string>
 
 </resources>

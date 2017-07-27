@@ -3,6 +3,7 @@ package com.taurus.sixtcartest.core;
 import android.app.Application;
 import com.hannesdorfmann.mosby.mvp.MvpBasePresenter;
 import com.taurus.sixtcartest.network.CarInfoApi;
+import com.taurus.sixtcartest.network.retrofit.RetrofitCarInfoApi;
 import io.reactivex.disposables.CompositeDisposable;
 import javax.inject.Inject;
 
@@ -12,7 +13,7 @@ public abstract class BasePresenter<V extends BaseView> extends MvpBasePresenter
     Application application;
 
     @Inject
-    CarInfoApi api;
+    RetrofitCarInfoApi api;
 
     protected CompositeDisposable compositeDisposable;
 
@@ -24,7 +25,7 @@ public abstract class BasePresenter<V extends BaseView> extends MvpBasePresenter
         return application;
     }
 
-    public CarInfoApi getApi() {
+    public RetrofitCarInfoApi getApi() {
         return api;
     }
 

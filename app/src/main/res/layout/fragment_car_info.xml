@@ -59,6 +59,9 @@
           android:layout_height="wrap_content"
           android:layout_marginStart="@dimen/space_medium"
           android:layout_weight="1"
+          android:textAppearance="@style/TextStyle.16"
+          android:textColor="@color/white"
+          android:gravity="center"
           style="@style/TextViewStyle"
           android:text="@string/display_on_map"
           android:maxLines="1" />
